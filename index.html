@@ -8,13 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        .fixedButton{
+        .fixedButton {
             position: fixed;
             bottom: 0px;
-            right: 0px; 
+            right: 0px;
             padding: 20px;
         }
-        
+
+        .form-switch input {
+            height: 20px;
+        }
     </style>
 </head>
 
@@ -22,112 +25,139 @@
     <div class="container-fluid p-3 text-white" style="background-color:#005b9e">
         Together
     </div>
-    <h5 class="text-center mt-1">Escolha o tipo de manutenção</h5>
-    <div class="container mt-3">
-        <div class="row">
-            <div class="col-sm-12">
-                <!-- Nav tabs -->
-                <ul class="nav nav-tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" data-bs-toggle="tab" href="#home">Preventiva</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#menu1">Corretiva</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" data-bs-toggle="tab" href="#menu2">Sinistro</a>
-                    </li>
-                </ul>
 
-                <!-- Tab panes -->
-                <div class="tab-content">
-                    <div class="tab-pane container active mt-1 " id="home">
-                        <ul class="list-group   ">
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Revisões</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Alinhamento/Balanciamento</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Revisão de blindagem</label>
-                                </div>
-                            </li>
+    <div class="container">
 
-                        </ul>
+
+        <div class="card mt-2">
+            <div class="card-header">Informações adicionais</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="input-group mb-3 input-group-sm">
+                            <span class="input-group-text">CEP</span>
+                            <input type="text" placeholder="informe o cep" class="form-control">
+                        </div>
                     </div>
-                    <div class="tab-pane container fade mt-1 " id="menu1">
-                        <ul class="list-group   ">
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Revisões</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Alinhamento/Balanciamento</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Revisão de blindagem</label>
-                                </div>
-                            </li>
-
-                        </ul>
-
+                    <div class="col-sm-6">
+                        <div class="input-group mb-3 input-group-sm">
+                            <span class="input-group-text">KM</span>
+                            <input type="text" placeholder="Informe a km do veículo" class="form-control">
+                        </div>
                     </div>
-                    <div class="tab-pane container fade mt-1 " id="menu2">
-                        <ul class="list-group   ">
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Revisões</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Alinhamento/Balanciamento</label>
-                                </div>
-                            </li>
-                            <li class="list-group-item">
-                                <div class="form-check form-switch">
-                                    <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
-                                        value="yes">
-                                    <label class="form-check-label" for="mySwitch">Revisão de blindagem</label>
-                                </div>
-                            </li>
-
-                        </ul>
-
+                    <div class="row">
                     </div>
                 </div>
             </div>
         </div>
+        <hr>
+        <h5 class="text-center mt-1">Escolha o tipo de manutenção</h5>
+        <div class="container mt-3">
+            <div class="row">
+                <div class="col-sm-12">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#home">Preventiva</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#menu1">Corretiva</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#menu2">Sinistro</a>
+                        </li>
+                    </ul>
 
-    </div>
-    <a class="fixedButton" href>
-        <div class="btn btn-primary"><i class="fa fa-phone"></i>Finalizar</div>
-     </a>
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <div class="tab-pane container active mt-1 " id="home">
+                            <ul class="list-group   ">
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="revisao"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Revisões</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Alinhamento/Balanciamento</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Revisão de blindagem</label>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="tab-pane container fade mt-1 " id="menu1">
+                            <ul class="list-group   ">
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Revisões</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Alinhamento/Balanciamento</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Revisão de blindagem</label>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                        <div class="tab-pane container fade mt-1 " id="menu2">
+                            <ul class="list-group   ">
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Revisões</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Alinhamento/Balanciamento</label>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="mySwitch" name="darkmode"
+                                            value="yes">
+                                        <label class="form-check-label" for="mySwitch">Revisão de blindagem</label>
+                                    </div>
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <a class="fixedButton" href>
+            <div class="btn btn-primary"><i class="fa fa-phone"></i>Finalizar</div>
+        </a>
 </body>
+
 </html>
