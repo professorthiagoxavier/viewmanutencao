@@ -162,25 +162,20 @@
         <div class="btn btn-primary"><i class="fa fa-phone"></i>Finalizar</div>
     </a>
     
-    <script> 
-        var builder = new BlipChat()
-.withAppKey('cm90ZWFkb3JzbnJhY2FyZWpvOmEzM2E5MGQyLTIxNzMtNDgxZC05NGU2LTk0MGZmYzBhZjU0Yg==')
-.withButton({"color":"#2CC3D5","icon":""})
-.withCustomCommonUrl('https://unidas.chat.blip.ai/')
-.withEventHandler(BlipChat.ENTER_EVENT, function () {
-console.log('enter'); dataLayer.push({ 'event': 'BlipEventEnter' });
-})
-.withEventHandler(BlipChat.LEAVE_EVENT, function () {
-console.log('leave'); dataLayer.push({ 'event': 'BlipEventLeave' });
-})
-.withEventHandler(BlipChat.LOAD_EVENT, function () {
-console.log('chat loaded'); dataLayer.push({ 'event': 'BlipEventLoad' });
-})
-.withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
-console.log('account created'); dataLayer.push({ 'event': 'BlipEventCreateAccount' });
-});
-builder.build();
-    </script>
+  <script src="https://unpkg.com/blip-chat-widget" type="text/javascript">
+</script>
+<script>
+    (function () {
+        window.onload = function () {
+            new BlipChat()
+            .withAppKey('cm90ZWFkb3JzbnJhY2FyZWpvOmEzM2E5MGQyLTIxNzMtNDgxZC05NGU2LTk0MGZmYzBhZjU0Yg==')
+            .withButton({"color":"#2CC3D5","icon":""})
+            .withCustomCommonUrl('https://unidas.chat.blip.ai/')
+            .build();
+        }
+    })();
+</script>
+                                
 </body>
 
 </html>
