@@ -21,6 +21,7 @@
                     .withCustomCommonUrl('https://unidas.chat.blip.ai/')
                     .withEventHandler(BlipChat.ENTER_EVENT, function () {
                         console.log('enter');
+                        localStorage.removeItem('blipSdkUAccount'); 
                         dataLayer.push({ 'event': 'BlipEventEnter' });
                     })
                     .withEventHandler(BlipChat.LEAVE_EVENT, function () {
@@ -28,7 +29,7 @@
                         dataLayer.push({ 'event': 'BlipEventLeave' });
                     })
                     .withEventHandler(BlipChat.LOAD_EVENT, function () {
-                        console.log('chat loaded');
+                        localStorage.removeItem('blipSdkUAccount'); 
                         dataLayer.push({ 'event': 'BlipEventLoad' });
                     })
                     .withEventHandler(BlipChat.CREATE_ACCOUNT_EVENT, function () {
