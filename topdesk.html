@@ -33,6 +33,10 @@
                     .withAppKey('cm90ZWFkb3J0aWVyaDpjYWRjZDRiOS01NjU1LTQxZTktYTRjNC1jZDA5NWNkMmExYWI=')
                     .withButton({ "color": "#005B9E", "icon": "https://blipmediastore.blob.core.windows.net/public-medias/Media_7d052586-3e37-48d3-a7d7-47580d50dcbc" })
                     .withCustomCommonUrl('https://unidas.chat.blip.ai/')
+                    .withEventHandler(BlipChat.ENTER_EVENT, function () {
+                        console.log('enter');
+                        localStorage.removeItem('blipSdkUAccount'); 
+                    })
                     .build();
             }
         })();
